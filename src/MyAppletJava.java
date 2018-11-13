@@ -18,12 +18,18 @@ public class MyAppletJava extends Applet implements ActionListener {
     public void init() {
         enterText = new Label("Enter Text: ");
         text = new TextField(25);
+
         enterKey = new Label("Enter key: ");
         key = new TextField(25);
+
         encrypt = new Button("Encrypt Text");
         decrypt = new Button("Decrypt Text");
+
         result_text = new Label("Resultant Text: ");
         result = new Label();
+
+        result_text.setFont(new Font("Serif",Font.ITALIC,20));
+        result.setFont(new Font("Serif",Font.BOLD,30));
 
         add(enterText);
         add(text);
@@ -37,6 +43,7 @@ public class MyAppletJava extends Applet implements ActionListener {
 
         add(result_text);
         add(result);
+
     }
 
     public void actionPerformed(ActionEvent ae) {
